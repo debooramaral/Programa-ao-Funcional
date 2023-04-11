@@ -1,0 +1,119 @@
+Com JS
+
+Por que programação funcional?
+- organiza uma linha de raciocinio
+- faz entender uma nova maneira de abordar os problemas, tanto na visão deles quanto na resolução
+- algumas tecnologias tem como requisito a programação funcional
+
+O que é?
+
+é um paradigma, ou seja, a maneira de observar as coisas, de entender as coisas; especificamente neste caso é a maneira de resolver problemas
+
+* funções
+- pequenas tarefaz dentro de uma função
+- abstrai um problema e isola ele dentro da função, como se fosse pequenas particular deste problema sendo resolvido na função
+- não modifica dados fora dela, só dentro do escopo
+- pequenas e bem especificas no que fazem
+
+* caracteristicas principais da função
+- um dado (ou mais) entra em uma função e um novo dado sai dessa função; sai modificado
+- não altera dados
+- não guarda estado 'stateless'
+
+* linguagens funcionais
+- JavaScript (multiparadigma)
+- PHP (multiparadigma)
+- Elixir
+- Haskell
+
+* pontos positivos
+- facil manutenção, como tudo é em funções, fica facil de dar aquele ajuste
+- facil uso de teste, porque são funções isoladas e consistentes
+- códigos mais confiaveis
+
+Principios
+
+* PARADIGMAS
+- programação imperativa vs programação declarativa
+
+* DADOS
+- imutalibidade e stateless
+
+* FUNÇÕES
+- independentes
+- puras
+- higher-order
+- fisrt-class
+- composição
+
+Programação Imperativa vs Declarativa
+
+* função que eleva o número ao quadrado
+
+imperativo: faça da seguinte forma, é uma receita de bolo, tem passo a passo
+
+let number = 2
+function square(){
+   return number * number
+}
+number = square()
+
+- o código é gerado e pensado em sequencia
+- uma coisa depende da outra
+- o estado de um dado é alterado constantemente causando mutações nas variaveis
+- orientação a objetos é um tipo de paradigma imperativo
+
+declarativa: o que fazer e não como fazer, é tipo 'o que deve ser feito não o passo a passo' 
+
+const square = n => n * n
+
+- o código é gerado para fazer algo, não importa como
+- não tem necessidade de um passo a passo no código
+- programação funcional é um tipo de paradigma declarativo
+
+Imutabilidade
+
+- uma variavel não vai variar
+- se você precisa mudar uma variavel, você não muda, você cria uma nova
+
+Stateless
+
+- não guarda estado (state=estado less=menos)
+- a função só conhece dados entregues a ela
+- a resposta não poderá variar
+
+Carateristicas das Funções
+	* funções independentes 
+	* funções puras
+	* first-class functions
+	* higher-order functions
+	* composição de funções
+
+- funções independentes
+* devera ter ao menos 1 argumento
+* devera retornar algo
+* nada que acontecer la dentro afeta o mundo externo
+	dados imutaveis
+	nao guardar estado
+* não faremos uso de loops (for, while), mas se houver necessidade de tal, usaremos recursão (a função chama ela mesma)
+
+- funções puras
+* não deverá depender de nenhum dado externo a não ser o que foi passado como argumento
+* não deverá sofrer nenhum interferencia do mundo externo a ela
+* se o argmento é o mesmo, o retorno não poderá ser diferente quando a função for chamada novamente
+* não tera nenhum efeito colateral no seu código
+	não ira modificar nenhum dado
+	não ira guardar nenhum dado
+
+- first-class function
+* podem estar em qualquer lugar, inclusive, como parametro de outras funções
+* a função poderá ser entendida como uma variavel
+
+- higher-order function
+* funções que recebem funções como argumentos
+* função que poderão retornar outras funções
+* currying
+
+- composição de funções 
+* um encadeamento de funções
+* uma função que retorna um dado e vai pra outra função, que retorna um dado e vai pra outra função, que retorna...
